@@ -1,25 +1,20 @@
-# 🎈 Blank app template
+# HCA - Trung tam Chinh tri
 
-A simple Streamlit app template for you to modify!
+Ung dung Streamlit bao gom ban do, thong ke co so vat chat va de xuat trung tam chinh tri.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Chay local
 
-### How to run it on your own machine
-
-Prerequisite: install `uv` if you don't already have it.
-
-```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
+```bash
+python -m pip install -r requirements.txt
+streamlit run streamlit_app.py
 ```
 
-1. Sync the dependencies
+## Deploy tren Streamlit Community Cloud
 
-   ```
-   $ uv sync
-   ```
+1. Day toan bo project len GitHub.
+2. Tao app moi tren Streamlit Community Cloud.
+3. Chon repository va branch chinh.
+4. Dat Main file path: `streamlit_app.py`.
+5. Deploy.
 
-2. Run the app
-
-   ```
-   $ uv run streamlit run streamlit_app.py
-   ```
+Project su dung `requirements.txt` va `.streamlit/config.toml` san co trong repository.
