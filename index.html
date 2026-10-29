@@ -2,7 +2,18 @@
 <html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>HCA - Trung tâm Chính trị</title>
 <script>
-const fitFrame=()=>{if(window.frameElement){window.frameElement.style.width='100%';window.frameElement.style.height=window.innerHeight+'px';window.frameElement.style.maxHeight='100vh'}};
+const fitFrame=()=>{
+  const frame=window.frameElement;
+  if(frame){
+    const viewport=frame.ownerDocument.defaultView;
+    const height=viewport?viewport.innerHeight:window.innerHeight;
+    frame.style.width='100vw';
+    frame.style.height=height+'px';
+    frame.style.maxHeight='100vh';
+  }
+  document.documentElement.style.height='100vh';
+  document.body.style.height='100vh';
+};
 addEventListener('load',fitFrame);
 addEventListener('resize',fitFrame);
 </script>

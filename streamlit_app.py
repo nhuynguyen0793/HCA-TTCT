@@ -19,10 +19,21 @@ st.markdown(
     [data-testid="stMain"] { padding: 0; }
     [data-testid="stMainBlockContainer"] {
         max-width: none;
-        width: 100%;
+        width: 100vw;
         padding: 0;
+        margin: 0;
     }
     [data-testid="stVerticalBlock"] { gap: 0; }
+    [data-testid="stIFrame"] {
+        width: 100vw !important;
+        height: 100vh !important;
+        max-height: 100vh !important;
+    }
+    [data-testid="stIFrame"] iframe {
+        width: 100vw !important;
+        height: 100vh !important;
+        border: 0 !important;
+    }
     iframe { border: 0 !important; }
     </style>
     """,
@@ -30,4 +41,4 @@ st.markdown(
 )
 
 html_template = Path(__file__).with_name("index.html")
-html(html_template.read_text(encoding="utf-8"), height=150, scrolling=False)
+html(html_template.read_text(encoding="utf-8"), height=900, scrolling=False)
